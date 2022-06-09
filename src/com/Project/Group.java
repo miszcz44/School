@@ -44,6 +44,7 @@ public class Group {
     public void setGroupTeacher(Teacher groupTeacher) {
         this.groupTeacher = groupTeacher;
     }
+
     public int getSizeOfTheGroup(){
         return students.size();
     }

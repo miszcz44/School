@@ -20,6 +20,7 @@ public class School {
     public int getTotalProfit() {
         return getTotalmoneyEarned() - getTotalmoneySpent();
     }
+
     public void addgroup(Group group) {
         groups.add(group);
     }

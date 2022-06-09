@@ -1,7 +1,8 @@
 package com.Project.Subjects;
 
 public class Maths extends AbstractSubject{
-    public Maths(String name, String subjectType) {
-        super(name, subjectType);
+    public Maths() {
+        this.name = "Mathematics";
+        this.subjectType = "Science";
     }
 }

@@ -2,6 +2,7 @@ package com.Project;
 
 import com.Project.Subjects.AbstractSubject;
 import com.Project.Subjects.English;
+import com.Project.Subjects.Maths;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +10,11 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        English english = new English("english", "human");
+        English english = new English();
+        Maths maths = new Maths();
         List<AbstractSubject> abstractSubjects = new ArrayList<>();
+        abstractSubjects.add(english);
+        abstractSubjects.add(maths);
         List<Group> groups = new ArrayList<>();
         List<Student> students = new ArrayList<>();
         List<Teacher> teachers = new ArrayList<>();
