@@ -40,7 +40,6 @@ public class Teacher {
         return salary;
     }
     public void teacherReceivesSalary() {
-        School.updateTotalMoneySpent(getSalary());
         moneyEarned += getSalary();
     }
 

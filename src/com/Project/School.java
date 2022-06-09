@@ -5,8 +5,8 @@ import java.util.List;
 public class School {
     private List<Group> groups;
     private List<Teacher> teachers;
-    private  int totalmoneyEarned;
-    private static int totalmoneySpent;
+    private int totalmoneyEarned;
+    private int totalmoneySpent;
     private int totalProfit;
 
     public School(List<Group> groups, List<Teacher> teachers) {
@@ -44,7 +44,7 @@ public class School {
         return totalmoneySpent;
     }
 
-    public static void updateTotalMoneySpent(int moneySpent) {
-        totalmoneySpent += moneySpent;
+    public void updateTotalMoneySpent(int moneySpent) {
+        this.totalmoneySpent += moneySpent;
     }
 }
