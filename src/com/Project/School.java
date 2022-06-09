@@ -3,14 +3,14 @@ package com.Project;
 import java.util.List;
 
 public class School {
-    private List<Class> classes;
+    private List<Group> groups;
     private List<Teacher> teachers;
     private  int totalmoneyEarned;
     private static int totalmoneySpent;
     private int totalProfit;
 
-    public School(List<Class> classes, List<Teacher> teachers) {
-        this.classes = classes;
+    public School(List<Group> groups, List<Teacher> teachers) {
+        this.groups = groups;
         this.teachers = teachers;
         this.totalmoneyEarned = 0;
         this.totalmoneySpent = 0;
@@ -20,8 +20,8 @@ public class School {
     public int getTotalProfit() {
         return getTotalmoneyEarned() - getTotalmoneySpent();
     }
-    public void addclass(Class classe) {
-        classes.add(classe);
+    public void addgroup(Group group) {
+        groups.add(group);
     }
 
     public List<Teacher> getTeachers() {
