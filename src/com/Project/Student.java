@@ -49,7 +49,7 @@ public class Student {
         return groupAffiliation;
     }
 
-    public void setGroupAffiliation(String groupAffiliation) {
+    protected void setGroupAffiliation(String groupAffiliation) {
         this.groupAffiliation = groupAffiliation;
     }
 }

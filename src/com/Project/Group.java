@@ -6,19 +6,20 @@ import java.util.List;
 public class Group {
     private int grade;
     private static String name;
-    static List<Student> students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
     private Teacher groupTeacher;
+    private Student groupPresident;
 
     public Group(int grade, String name, List<Student> students, Teacher groupTeacher) {
         this.grade = grade;
         this.name = String.valueOf(grade) + name;
         this.students = students;
         this.groupTeacher = groupTeacher;
-        groupTeacher.setGroupAffiliation(getName());
+        groupTeacher.setGroupAffiliation(this.name);
     }
-    public static void addStudent(Student student){
+    public void addStudent(Student student){
         students.add(student);
-        student.setGroupAffiliation(getName());
+        student.setGroupAffiliation(this.name);
     }
 
     public void setGrade(int grade) {
@@ -29,7 +30,7 @@ public class Group {
         return grade;
     }
 
-    public static String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -48,4 +49,13 @@ public class Group {
     public int getSizeOfTheGroup(){
         return students.size();
     }
+
+    public Student getGroupPresident() {
+        return groupPresident;
+    }
+
+    public void setGroupPresident(Student groupPresident) {
+        this.groupPresident = groupPresident;
+    }
+
 }

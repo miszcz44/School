@@ -22,6 +22,8 @@ public class Main {
         Teacher andrzejkozlowski = new Teacher("Andrzej Kozłowski", 27, 3200,"inżynier",10,abstractSubjects);
         school.addTeacher(andrzejkozlowski);
         andrzejkozlowski.addSubject(english);
+        Student student = new Student("ABC",5,151880);
+        student.setGroupAffiliation("");
 
 
 

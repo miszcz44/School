@@ -12,14 +12,14 @@ public class Teacher {
     private String groupAffiliation;
     private String degree;
     private int yearsofWork;
-    private List<AbstractSubject> subjectscapableofTeaching;
+    private List<AbstractSubject> subjectsCapableOfTeaching;
 
-    public Teacher(String name, int id, int salary, String degree, int yearsofWork, List<AbstractSubject> subjectscapableofTeaching) {
+    public Teacher(String name, int id, int salary, String degree, int yearsofWork, List<AbstractSubject> subjectsCapableOfTeaching) {
         this.name = name;
         this.id = id;
         this.salary = salary;
         this.yearsofWork = yearsofWork;
-        this.subjectscapableofTeaching = subjectscapableofTeaching;
+        this.subjectsCapableOfTeaching = subjectsCapableOfTeaching;
         this.moneyEarned = 0;
         this.degree = degree;
     }
@@ -56,11 +56,11 @@ public class Teacher {
     }
 
     public void addSubject(AbstractSubject subject){
-        subjectscapableofTeaching.add(subject);
+        subjectsCapableOfTeaching.add(subject);
     }
 
     public void getSubjects(){
-        for(AbstractSubject abstractSubject : subjectscapableofTeaching) {
+        for(AbstractSubject abstractSubject : subjectsCapableOfTeaching) {
             System.out.println(abstractSubject);
         }
     }
