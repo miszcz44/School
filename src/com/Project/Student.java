@@ -49,7 +49,13 @@ public class Student {
         return groupAffiliation;
     }
 
-    protected void setGroupAffiliation(String groupAffiliation) {
-        this.groupAffiliation = groupAffiliation;
+    public void setGroupAffiliation(String groupAffiliation)
+    {
+        if(this.groupAffiliation != null){
+            this.groupAffiliation = groupAffiliation;
+            return;
+        }
+        System.out.println("To transfer a student to another class you need to first remove him from his current class.");
+
     }
 }

@@ -22,6 +22,11 @@ public class Group {
         student.setGroupAffiliation(this.name);
     }
 
+    public void removeStudentFromAGroup(Student student){
+        students.remove(student);
+        student.setGroupAffiliation(null);
+    }
+
     public void setGrade(int grade) {
         this.grade = grade;
     }

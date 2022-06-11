@@ -23,7 +23,7 @@ public class Main {
         school.addTeacher(andrzejkozlowski);
         andrzejkozlowski.addSubject(english);
         Student student = new Student("ABC",5,151880);
-        student.setGroupAffiliation("");
+
 
 
 
