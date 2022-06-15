@@ -1,6 +1,8 @@
 package com.Project;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Group {
@@ -10,16 +12,16 @@ public class Group {
     private Teacher groupTeacher;
     private Student groupPresident;
 
-    public Group(int grade, String name, List<Student> students, Teacher groupTeacher) {
+    public Group(int grade, String name, Teacher groupTeacher) {
         this.grade = grade;
         this.name = String.valueOf(grade) + name;
-        this.students = students;
         this.groupTeacher = groupTeacher;
-        groupTeacher.setGroupAffiliation(this.name);
+        groupTeacher.setGroupAffiliation(name);
     }
     public void addStudent(Student student){
         students.add(student);
-        student.setGroupAffiliation(this.name);
+        student.setGrade(grade);
+        student.setGroupAffiliation(name);
     }
 
     public void removeStudentFromAGroup(Student student){
@@ -39,8 +41,14 @@ public class Group {
         return name;
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public void printStudentsInOrder()
+    {
+        int counter = 1;
+        students.sort(Comparator.comparing(Student::getName));
+        for(Student student : students){
+            System.out.printf("%d. %s ", counter, student.getName());
+            counter += 1;
+        }
     }
 
     public Teacher getGroupTeacher() {

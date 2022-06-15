@@ -13,9 +13,8 @@ public class Student {
     private String groupAffiliation;
     private HashMap<Course, Integer> marksByCourse = new HashMap<Course, Integer>();
 
-    public Student(String name, int grade, int id) {
+    public Student(String name, int id) {
         this.name = name;
-        this.grade = grade;
         this.id = id;
         this.salaryFee = 30000;
         this.salaryPaid = 0;
@@ -56,10 +55,11 @@ public class Student {
 
     public void setGroupAffiliation(String groupAffiliation)
     {
-        if(this.groupAffiliation != null){
+        if(this.groupAffiliation == null){
             this.groupAffiliation = groupAffiliation;
             return;
         }
         System.out.println("To transfer a student to another class you need to first remove him from his current class.");
     }
+
 }

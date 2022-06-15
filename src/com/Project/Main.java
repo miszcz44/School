@@ -23,7 +23,16 @@ public class Main {
         Teacher andrzejkozlowski = new Teacher("Andrzej Kozłowski", 27, 3200,"inżynier",10, Courses);
         school.addTeacher(andrzejkozlowski);
         andrzejkozlowski.addCourse(english);
-        Student student = new Student("ABC",5,151880);
+        Student student = new Student("ABC",151880);
+        Student student2 = new Student("ABCdef",151880);
+        Student student3 = new Student("cqwaaewrq",151880);
+        Student student4 = new Student("brberaewrq",151880);
+        Group group = new Group(5, "a", andrzejkozlowski);
+        group.addStudent(student);
+        group.addStudent(student2);
+        group.addStudent(student3);
+        group.addStudent(student4);
+        group.printStudentsInOrder();
 
 
 
