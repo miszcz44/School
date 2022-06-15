@@ -15,13 +15,14 @@ public class Main {
         List<Course> Courses = new ArrayList<>();
         Courses.add(english);
         Courses.add(maths);
+        System.out.println(Courses.get(0).getName());
         List<Group> groups = new ArrayList<>();
         List<Student> students = new ArrayList<>();
         List<Teacher> teachers = new ArrayList<>();
         School school = new School(groups, teachers);
         Teacher andrzejkozlowski = new Teacher("Andrzej Kozłowski", 27, 3200,"inżynier",10, Courses);
         school.addTeacher(andrzejkozlowski);
-        andrzejkozlowski.addSubject(english);
+        andrzejkozlowski.addCourse(english);
         Student student = new Student("ABC",5,151880);
 
 

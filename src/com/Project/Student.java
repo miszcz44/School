@@ -1,5 +1,7 @@
 package com.Project;
 
+import com.Project.Subjects.Course;
+
 import java.util.HashMap;
 
 public class Student {
@@ -9,6 +11,7 @@ public class Student {
     private int salaryFee;
     private int salaryPaid;
     private String groupAffiliation;
+    private HashMap<Course, Integer> marksByCourse = new HashMap<Course, Integer>();
 
     public Student(String name, int grade, int id) {
         this.name = name;
@@ -58,6 +61,5 @@ public class Student {
             return;
         }
         System.out.println("To transfer a student to another class you need to first remove him from his current class.");
-
     }
 }
