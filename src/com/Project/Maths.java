@@ -1,4 +1,4 @@
-package com.Project.Subjects;
+package com.Project;
 
 public class Maths extends Course{
     public Maths() {

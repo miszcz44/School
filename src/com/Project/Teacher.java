@@ -1,7 +1,8 @@
 package com.Project;
 
-import com.Project.Subjects.Course;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Teacher {
@@ -12,14 +13,13 @@ public class Teacher {
     private String groupAffiliation;
     private String degree;
     private int yearsofWork;
-    private List<Course> coursesCapableOfTeaching;
+    private List<String> coursesCapableOfTeaching = new ArrayList<String>();
 
-    public Teacher(String name, int id, int salary, String degree, int yearsofWork, List<Course> coursesCapableOfTeaching) {
+    public Teacher(String name, int id, int salary, String degree, int yearsofWork) {
         this.name = name;
         this.id = id;
         this.salary = salary;
         this.yearsofWork = yearsofWork;
-        this.coursesCapableOfTeaching = coursesCapableOfTeaching;
         this.moneyEarned = 0;
         this.degree = degree;
     }
@@ -55,12 +55,12 @@ public class Teacher {
         this.groupAffiliation = groupAffiliation;
     }
 
-    public void addCourse(Course course) {
-        coursesCapableOfTeaching.add(course);
+    public void addCourse(String courseName) {
+        coursesCapableOfTeaching.add(courseName);
     }
 
-    public void getCourses(){
-        for(Course course : coursesCapableOfTeaching) {
+    public void getCoursesCapableOfTeaching(){
+        for(String course : coursesCapableOfTeaching) {
             System.out.println(course);
         }
     }

@@ -1,15 +1,15 @@
 package com.Project;
 
-import com.Project.Subjects.English;
-import com.Project.Subjects.Maths;
-import com.Project.Subjects.Course;
-
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+        DatabaseConnection connection = new DatabaseConnection();
+        connection.createConnection();
+
         English english = new English();
         Maths maths = new Maths();
         List<Course> Courses = new ArrayList<>();
@@ -20,9 +20,9 @@ public class Main {
         List<Student> students = new ArrayList<>();
         List<Teacher> teachers = new ArrayList<>();
         School school = new School(groups, teachers);
-        Teacher andrzejkozlowski = new Teacher("Andrzej Kozłowski", 27, 3200,"inżynier",10, Courses);
+        Teacher andrzejkozlowski = new com.Project.Teacher("Andrzej Kozłowski", 27, 3200,"inżynier",10);
         school.addTeacher(andrzejkozlowski);
-        andrzejkozlowski.addCourse(english);
+        andrzejkozlowski.addCourse(english.getName());
         Student student = new Student("ABC",151880);
         Student student2 = new Student("ABCdef",151880);
         Student student3 = new Student("cqwaaewrq",151880);

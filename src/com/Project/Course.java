@@ -1,4 +1,4 @@
-package com.Project.Subjects;
+package com.Project;
 
 public abstract class Course {
     protected String name;

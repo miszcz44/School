@@ -1,7 +1,6 @@
 package com.Project;
 
-import com.Project.Subjects.Course;
-
+import java.sql.*;
 import java.util.HashMap;
 
 public class Student {
